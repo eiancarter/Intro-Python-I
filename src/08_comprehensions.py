@@ -13,6 +13,7 @@ for more info regarding list comprehensions.
 y = []
 for i in range(5):
     y.append(i + 1)
+    ## y = [ i for i in range(1,6)]
 
 print (y)
 
@@ -39,9 +40,10 @@ print(y)
 x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
-y = []
-for i in range(len(x)):
-    if x[i] // 2 == 0:
-        y.append(x[i])
+# y = []
+# for i in range(len(x)):
+#     if x[i] % 2 == 0:
+#         y.append(x[i])
+y = [elem for elem in x if int(elem) % 2 == 0]
 
 print(y)
